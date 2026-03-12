@@ -1,8 +1,8 @@
 name: 🚀 Deploy cloud-mail to Cloudflare Workers
 
-于:
+on:
   push:
-    分支: [ main ]
+    branches: [ main ]
     paths:
       - "mail-worker/**"
       - "mail-vue/**"
@@ -121,7 +121,7 @@ jobs:
           echo "✅ Environment setup completed."
 
       - name: ⚡ 设置KV数据库 / Set up KV database
-        working-directory: 。/mail-worker
+        working-directory: ./mail-worker
         run: |
           
           CONFIG_FILE="wrangler-action.toml"
